@@ -69,8 +69,9 @@ SELECT <column_name>,
 FROM sleep_analysis
 GROUP BY <column_name>; --where <column_name> can be: gender, age_category, occupation, bmi_category, sleep_disorder
 
-
-
+/* Q1: */
+/* Q2: */
+/* Q3: */
 
 
 
