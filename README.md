@@ -30,10 +30,13 @@ The dataset [Sleep, Health & Lifestyle](https://www.kaggle.com/datasets/henrysha
 3.	What are the differences between healthy individuals and those with sleeping disorder?
 
 ### Data analysis and visualisation
-Data were analyzed using PostgreSQL and visualised in Tableau. 
-Visualisation is available here.
+Data were analyzed using [PostgreSQL](https://www.postgresql.org/) and visualised in [Tableau](https://public.tableau.com/app/discover). Full analysis is available [HERE](https://github.com/MGdata148/sleep-analysis/blob/main/code). Visualisation is available HERE.
 
 ### Discussion
+1.	Who sleeps better considering age, gender and occupation?
+2.	How stress, physical activity and basic health indicators associate with sleep parameters?
+3.	What are the differences between healthy individuals and those with sleeping disorder?
+
 ### Conclusions
 
 
