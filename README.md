@@ -7,7 +7,7 @@ The ability to sleep is a superpower. When we sleep, our physical and mental act
 The aim of this project is to identify the association between lifestyle patterns and sleep in the examined population and to compare the obtained results with the literature data.
 
 ### About dataset
-The dataset `lifestyle_info` [Sleep, Health & Lifestyle](https://www.kaggle.com/datasets/henryshan/sleep-health-and-lifestyle) was obtained from [Kaggle](https://www.kaggle.com/) and contains information associated with sleep, health and physical activity of 373 individuals.
+The dataset `lifestyle_info` originally called [Sleep, Health & Lifestyle](https://www.kaggle.com/datasets/henryshan/sleep-health-and-lifestyle) was obtained from [Kaggle](https://www.kaggle.com/) and contains information associated with sleep, health and physical activity of 373 individuals.
 
 #### The variables are as follows:
 - `id` - a unique identifier for each participant
