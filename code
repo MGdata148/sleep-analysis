@@ -1,4 +1,21 @@
-RESEARCH QUESTIONS:
-1.	Who sleeps better considering age, gender and occupation?
-2.	Are stress and sleep parameters associated?
-3.	Are physical activity and sleep parameters associated?
+/* DATA CLEANING */
+
+-- Unique and not null ID
+
+SELECT COUNT(*) AS all_values,
+	COUNT(DISTINCT id) AS distinct_values
+FROM lifestyle_info;
+
+--Missing values
+
+SELECT *
+FROM lifestyle_info
+WHERE <column_name> IS NULL; --for every field
+
+--Data quality issues
+
+SELECT <column_name>, --for every categorical field
+	COUNT(*)
+FROM lifestyle_info
+GROUP BY <column_name>; --same categorical field
+
