@@ -69,10 +69,73 @@ SELECT <column_name>,
 FROM sleep_analysis
 GROUP BY <column_name>; --where <column_name> can be: gender, age_category, occupation, bmi_category, sleep_disorder
 
-/* Q1: */
-/* Q2: */
-/* Q3: */
+/* Q1: WHO SLEEPS BETTER CONSIDERING AGE, GENDER AND OCCUPATION? */
 
+--Relationship between sleep length and quality
+
+SELECT CORR(sleep_duration, sleep_quality)
+FROM sleep_analysis;
+
+-- Age
+
+SELECT CORR(age, sleep_duration) AS age_vs_sd,
+	CORR(age, sleep_quality) AS age_vs_sq
+FROM sleep_analysis;
+
+SELECT age_category,
+	AVG(sleep_duration) AS mean_sleep_length,
+	AVG(sleep_quality) AS mean_sleep_quality,
+	COUNT(*)
+FROM sleep_analysis
+GROUP BY age_category
+ORDER BY age_category ASC;
+
+--Gender
+
+SELECT gender,
+	AVG(sleep_duration) AS mean_sleep_length,
+	AVG(sleep_quality) AS mean_sleep_quality,
+	COUNT(*)
+FROM sleep_analysis
+GROUP BY gender;
+
+--Age and gender
+
+SELECT age_category,
+	gender,
+	AVG(sleep_duration) AS mean_sleep_length,
+	AVG(sleep_quality) AS mean_sleep_quality,
+	COUNT(*)
+FROM sleep_analysis
+GROUP BY age_category, gender
+ORDER BY age_category ASC;
+
+--Occupation
+
+SELECT occupation,
+	AVG(sleep_duration) AS mean_sleep_length,
+	AVG(sleep_quality) AS mean_sleep_quality,
+	COUNT(*)
+FROM sleep_analysis
+GROUP BY occupation;
+
+/* Q2: HOW STRESS, PHYSICAL ACTIVITY AND BASIC HEALTH INDICATORS ASSOCIATE WITH SLEEP PARAMETERS? */
+
+SELECT CORR(stress_level, sleep_duration) AS sl_vs_sd,
+	CORR(stress_level, sleep_quality) AS sl_vs_sq,
+	CORR(physical_activity_level, sleep_duration) AS pal_vs_sd,
+	CORR(physical_activity_level, sleep_quality) AS pal_vs_sq,
+	CORR(daily_steps, sleep_duration) AS ds_vs_sd,
+	CORR(daily_steps, sleep_quality) AS ds_vs_sq,
+	CORR(systolic::INTEGER, sleep_duration) AS s_vs_sq,
+	CORR(systolic::INTEGER, sleep_quality) AS s_vs_sq,
+	CORR(diastolic::INTEGER, sleep_duration) AS d_vs_sq,
+	CORR(diastolic::INTEGER, sleep_quality)AS d_vs_sq,
+	CORR(heart_rate, sleep_duration) AS hr_vs_sq,
+	CORR(heart_rate, sleep_quality) AS hr_vs_sq
+FROM sleep_analysis;
+
+/* Q3: WHAT ARE THE DIFFERENCES BETWEEN HEALTHY INDIVIDUALS AND THOSE WITH SLEEPING DISORDER? */
 
 
 
