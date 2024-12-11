@@ -60,7 +60,15 @@ SELECT AVG(<column_name>) AS mean,
 	MAX(<column_name>) - MIN(<column_name>) AS range,
 	PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY <column_name> ASC) – 
 PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY <column_name> ASC) AS iqr
-FROM sleep_analysis; -- where <column_name> can be: age, sleep_duration, sleep_quality, physical_activity_level, stress_level, heart_rate, daily_steps, systolic, diastolic
+FROM sleep_analysis; --where <column_name> can be: age, sleep_duration, sleep_quality, physical_activity_level, stress_level, heart_rate, daily_steps, systolic, diastolic
+
+--Qualitative data
+
+SELECT <column_name>,
+	COUNT(*)
+FROM sleep_analysis
+GROUP BY <column_name>; --where <column_name> can be: gender, age_category, occupation, bmi_category, sleep_disorder
+
 
 
 
