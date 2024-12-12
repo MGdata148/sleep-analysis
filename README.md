@@ -30,7 +30,10 @@ The dataset `lifestyle_info` originally called [Sleep, Health & Lifestyle](https
 3.	What are the differences between healthy individuals and those with sleeping disorder?
 
 ### Data analysis and visualisation
-Data were analyzed using [PostgreSQL](https://www.postgresql.org/) and visualised in [Tableau](https://public.tableau.com/app/discover). Full analysis is available [HERE](https://github.com/MGdata148/sleep-analysis/blob/main/code). Visualisation is available HERE.
+Data were analyzed using [PostgreSQL](https://www.postgresql.org/) and visualised in [Tableau](https://public.tableau.com/app/discover). 
+- [Data cleaning and analysis](https://github.com/MGdata148/sleep-analysis/blob/main/code)
+- [Results]()
+- Visualisation
 
 ### Discussion
 1.	Who sleeps better considering age, gender and occupation?
