@@ -108,7 +108,7 @@ SELECT age_category,
 	AVG(sleep_quality) AS mean_sleep_quality
 FROM sleep_analysis
 GROUP BY age_category, gender
-ORDER BY age_category ASC;
+ORDER BY age_category ASC, gender ASC;
 
 --Occupation
 
