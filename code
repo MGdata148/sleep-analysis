@@ -83,9 +83,9 @@ SELECT CORR(age, sleep_duration) AS age_vs_sd,
 FROM sleep_analysis;
 
 SELECT age_category,
+	COUNT(*),
 	AVG(sleep_duration) AS mean_sleep_length,
-	AVG(sleep_quality) AS mean_sleep_quality,
-	COUNT(*)
+	AVG(sleep_quality) AS mean_sleep_quality
 FROM sleep_analysis
 GROUP BY age_category
 ORDER BY age_category ASC;
@@ -93,9 +93,9 @@ ORDER BY age_category ASC;
 --Gender
 
 SELECT gender,
+	COUNT(*),
 	AVG(sleep_duration) AS mean_sleep_length,
-	AVG(sleep_quality) AS mean_sleep_quality,
-	COUNT(*)
+	AVG(sleep_quality) AS mean_sleep_quality
 FROM sleep_analysis
 GROUP BY gender;
 
@@ -103,9 +103,9 @@ GROUP BY gender;
 
 SELECT age_category,
 	gender,
+	COUNT(*),
 	AVG(sleep_duration) AS mean_sleep_length,
-	AVG(sleep_quality) AS mean_sleep_quality,
-	COUNT(*)
+	AVG(sleep_quality) AS mean_sleep_quality
 FROM sleep_analysis
 GROUP BY age_category, gender
 ORDER BY age_category ASC;
@@ -113,9 +113,9 @@ ORDER BY age_category ASC;
 --Occupation
 
 SELECT occupation,
+	COUNT(*),
 	AVG(sleep_duration) AS mean_sleep_length,
-	AVG(sleep_quality) AS mean_sleep_quality,
-	COUNT(*)
+	AVG(sleep_quality) AS mean_sleep_quality
 FROM sleep_analysis
 GROUP BY occupation;
 
