@@ -137,10 +137,18 @@ FROM sleep_analysis;
 
 /* Q3: WHAT ARE THE DIFFERENCES BETWEEN HEALTHY INDIVIDUALS AND THOSE WITH SLEEPING DISORDER? */
 
+--Sleep disorder prevalence
+
+SELECT *,
+	ROUND((sd.count / 373 * 100), 2) AS sleep_disorder_percentage
+FROM(SELECT sleep_disorder,
+		COUNT(*)::NUMERIC
+	FROM sleep_analysis
+	GROUP BY sleep_disorder) AS sd; --subquery in FROM statement to preaggregate and change data type
+
 --Measurable parameters in healthy indviduals and those with sleeping disorder
 
 SELECT sleep_disorder,
-	COUNT(*),
 	AVG(sleep_duration) AS mean_sleep_length,
 	AVG(sleep_quality) AS mean_sleep_quality,
 	AVG(age) AS mean_age,
