@@ -137,14 +137,25 @@ FROM sleep_analysis;
 
 /* Q3: WHAT ARE THE DIFFERENCES BETWEEN HEALTHY INDIVIDUALS AND THOSE WITH SLEEPING DISORDER? */
 
+--Measurable parameters in healthy indviduals and those with sleeping disorder
 
+SELECT sleep_disorder,
+	COUNT(*),
+	AVG(sleep_duration) AS mean_sleep_length,
+	AVG(sleep_quality) AS mean_sleep_quality,
+	AVG(age) AS mean_age,
+	AVG(physical_activity_level) AS mean_activity_level,
+	AVG(daily_steps) AS mean_daily_steps,
+	AVG(systolic::INTEGER) AS mean_systolic_bp,
+	AVG(diastolic::INTEGER) AS mean_diastolic_bp,
+	AVG(heart_rate) AS mean_heart_rate
+FROM sleep_analysis
+GROUP BY sleep_disorder;
 
+--Association of sleep disorder with weight
 
-
-
-
-
-
-
-
-
+SELECT sleep_disorder,
+	bmi_category,
+	COUNT(*)
+FROM sleep_analysis
+GROUP BY CUBE(sleep_disorder, bmi_category);
