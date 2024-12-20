@@ -33,7 +33,7 @@ The dataset `lifestyle_info` originally called [Sleep, Health & Lifestyle](https
 Data was analyzed using [PostgreSQL](https://www.postgresql.org/) and visualised in [Tableau](https://public.tableau.com/app/discover). 
 - [Data cleaning and analysis](https://github.com/MGdata148/sleep-analysis/blob/main/code)
 - [Results](https://github.com/MGdata148/sleep-analysis/blob/main/results.docx)
-- Visualisation
+- [Visualisation](https://public.tableau.com/views/Sleepanalysis_17347068539190/SleepAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ### Discussion
 
